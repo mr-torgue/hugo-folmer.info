@@ -1,4 +1,0 @@
-baseURL: http://localhost
-locale: en-us
-title: My New Hugo Project
-theme: ["PaperMod"]
