@@ -1,14 +1,15 @@
 ---
 title: "Reading the Intent Behind the Fake: Reverse Prompt Engineering and the Fight Against AI Deception"
 date: 2026-10-31
-image: cover.jpg
+image: cover2.jpg
+headingAnchor: false
 tags: 
   - Reverse Prompt Engineering
 categories: 
   - Research
 ---
 
-# We can't spot fake content anymore
+## We can't spot fake content anymore
 
 A systematic review of 56 studies, covering more than 86,000 participants, found that humans detect deepfakes with about 55% accuracy. That is a coin flip. For AI-generated *text*, we drop to roughly 52%, worse than a coin flip.
 
@@ -22,7 +23,7 @@ So if neither people nor software can reliably answer *"is this fake?"*, maybe w
 
 That question is what our research is about.
 
-# First, a quick primer: what's a prompt?
+## First, a quick primer: what's a prompt?
 
 Every piece of AI-generated content, an email, an image, a cloned voice, a "news" article, started with an instruction. That instruction is called a **prompt**.
 
@@ -32,7 +33,7 @@ But here's the thing: the prompt is where the *intent* lives. A disinformation c
 
 Which raises an obvious idea: what if we could work *backwards*?
 
-# Reverse prompt engineering: reading the recipe from the cake
+## Reverse prompt engineering: reading the recipe from the cake
 
 **Reverse prompt engineering (RPE)** is exactly that: given only a piece of AI-generated output, infer the instruction that most likely produced it.
 
@@ -46,7 +47,7 @@ The results beat the previous state of the art, and, just as importantly, the re
 
 This work matters for one big reason: **it proved that prompts are not really secrets.** If a system prompt hidden behind a chatbot can be reconstructed from a few of its answers, everyone building products on top of "confidential" prompts needs to think again. And every investigator trying to understand malicious AI content got a new tool.
 
-# Our first study: mapping the horizon
+## Our first study: mapping the horizon
 
 That breakthrough inspired our team's first contribution: a **horizon scan**,a systematic survey of where this emerging field is and where it's going. In *"Reverse Prompt Engineering: A Horizon Scan of Prompt Attribution and Recovery in Generative AI"*, we analysed academic and industry developments and found a field moving fast, but unevenly.
 
@@ -60,7 +61,7 @@ Three findings stand out:
 
 From this scan we proposed a conceptual framework for future RPE systems,multi-modal, privacy-conscious, and grounded in clear evaluation metrics,and mapped out use cases from academic integrity to digital forensics to regulatory compliance.
 
-# Our latest work: a baseline for fighting deepfakes, deception, and disinformation
+## Our latest work: a baseline for fighting deepfakes, deception, and disinformation
 
 The horizon scan told us where the field was. Our newest paper, *"Reverse Prompt Engineering in Generative AI: A Baseline for Deepfake, Deception and Disinformation Mitigation,"* goes a step further: it positions RPE explicitly as a **defensive capability** against what we call the **D3 threats**,**Deepfakes, Deception, and Disinformation**.
 
@@ -81,7 +82,7 @@ A concrete example from the paper: a company runs an ad featuring an AI-generate
 
 That honesty about limits is deliberate. In a courtroom or a newsroom, a recovered prompt is one piece of evidence, not a verdict.
 
-# The honest caveats
+## The honest caveats
 
 RPE is promising, not magic. Three constraints matter most:
 
@@ -91,7 +92,7 @@ RPE is promising, not magic. Three constraints matter most:
 
 And there's a darker side we can't ignore: RPE is dual-use. The same techniques that help investigators could be used to steal a company's proprietary prompts, clone a commercial service, or de-anonymise people whose personal data leaks into their queries. That's why our paper pairs the technical case with a legal and policy one, including the need for ethical guidelines and licensing for RPE tools.
 
-# Why the law should care
+## Why the law should care
 
 Legally, prompts occupy a strange no-man's-land. Most jurisdictions don't consider raw prompts copyrightable,they're treated as functional instructions. So companies fall back on trade secret law and contracts, and unauthorised prompt extraction is already being litigated (in 2025, *OpenEvidence v. Pathway Medical* framed prompt extraction as trade secret misappropriation). Importantly, *defensive* RPE,security auditing and disinformation forensics,typically falls under research exceptions and fair-use-style protections.
 
@@ -99,7 +100,7 @@ On the policy side, regulation is arriving faster than the tools. The EU AI Act,
 
 To make that practical, we propose **prompt governance**,treating the instruction layer as something organisations actively monitor and secure, the way they manage code or user data today. That means version control and audit trails for system prompts, standardised "ingredient label" disclosures for public-facing models, and runtime auditing that catches jailbreak attempts before they reach the model. International standards like ISO 42001 and the NIST AI Risk Management Framework give this a ready-made home.
 
-# Why this matters to you, not just to researchers
+## Why this matters to you, not just to researchers
 
 Two psychological effects make AI deception a problem for everyone:
 
@@ -108,7 +109,7 @@ Two psychological effects make AI deception a problem for everyone:
 
 Defences that only say "fake" or "not fake" feed both problems. A tool that can say *"this content is consistent with an attempt to defame candidate X using neutral-sounding language"* gives journalists, fact-checkers, and courts something far more useful: insight into *intent*.
 
-# Where we go from here
+## Where we go from here
 
 Our research roadmap is straightforward, if ambitious:
 
